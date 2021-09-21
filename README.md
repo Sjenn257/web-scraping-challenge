@@ -12,7 +12,7 @@ For this assignment, I built a web application that scrapes various websites for
 
 1. Open the app.py file and run the code to open the web application. 
 2. You will first see a Mission to Mars webpage with titles only, no data.
-3. Click the Scrape New Data! button and you'll get the following:</br></br>
+3. Click the Scrape New Data! button and you'll get the following:</br>
    <ul>
        <li>- Latest News Headline and Summary regarding Mars (website scraped: https://redplanetscience.com/)</li>
        <li>- A Featured Image of Mars (website scraped: https://spaceimages-mars.com/)</li>
