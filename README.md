@@ -7,6 +7,17 @@ For this assignment, I built a web application that scrapes various websites for
  - Python code to define the scrape function
  - Python code to run the flask app and HTML page
  - HTML page within the templates folder that displays the scraped data (and runs the scrape function through the click of a button)
+
+### How It Works:
+
+1. Open the app.py file and run the code to open the web application. 
+2. You will first see a Mission to Mars webpage with titles only, no data.
+3. Click the Scrape New Data! button and you'll get the following:
+       - Latest News Headline and Summary regarding Mars (website scraped: https://redplanetscience.com/)
+       - A Featured Image of Mars (website scraped: https://spaceimages-mars.com/)
+       - Mars Facts (website scraped: https://galaxyfacts-mars.com/)
+       - An image for each of Mars' hemispheres (websites scraped:https://marshemispheres.com/)
+4. Note: the scraped data is stored in a newly created MongoDb called mars_db and a collection. If exists, each new scrape will be added as a document within the collection.
  
 
 ### Screenshots of the Web Application:
