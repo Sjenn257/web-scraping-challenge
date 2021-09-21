@@ -13,10 +13,12 @@ For this assignment, I built a web application that scrapes various websites for
 1. Open the app.py file and run the code to open the web application. 
 2. You will first see a Mission to Mars webpage with titles only, no data.
 3. Click the Scrape New Data! button and you'll get the following:</br></br>
-       - Latest News Headline and Summary regarding Mars (website scraped: https://redplanetscience.com/)
-       - A Featured Image of Mars (website scraped: https://spaceimages-mars.com/)
-       - Mars Facts (website scraped: https://galaxyfacts-mars.com/)
-       - An image for each of Mars' hemispheres (websites scraped:https://marshemispheres.com/)
+   <ul>
+       <li>- Latest News Headline and Summary regarding Mars (website scraped: https://redplanetscience.com/)</li>
+       <li>- A Featured Image of Mars (website scraped: https://spaceimages-mars.com/)</li>
+       <li>- Mars Facts (website scraped: https://galaxyfacts-mars.com/)</li>
+       <li>- An image for each of Mars' hemispheres (websites scraped:https://marshemispheres.com/)</li>
+   </ul>
 4. Note: the scraped data is stored in a newly created MongoDb called mars_db and a collection. If exists, each new scrape will be added as a document within the collection.
  
 
