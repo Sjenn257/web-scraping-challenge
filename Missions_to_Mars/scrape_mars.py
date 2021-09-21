@@ -124,9 +124,10 @@ def scrape():
         h_title=h_title.rstrip('Enhanced')
         h_title=h_title.rstrip(' ')
     
-        parent2 = item_results.find('div', class_='description')
-    
-        h_image=parent2.find('a')['href']
+        parent2 = item_results.find('div', class_='downloads')
+        first_image=parent2.find('ul')
+        h_image_item = first_image.find_all('li')[0]
+        h_image = h_image_item.find('a')['href']
     
     
         # Create dictionary

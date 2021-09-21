@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mission to Mars</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 
 <body>
@@ -44,18 +44,24 @@
         <div class="container">
             <h2 class="text-center"><b>Mars Hemispheres</b></h2>
             <hr>
-            <div class="row">
-                {% for item in mars.hemispheres %}
-                    <div class="col-md-3">
-                        <div class="card">
-                            <img class="card-img-top" src={{item.image_url}} alt={{item.title}}>
-                        <div class="card-body">
-                        <h3 class="card-text" class="text-center"><b>{{item.title}}</b></h3>
+            <div>
+
+                    {% for item in mars.hemispheres %}
+
+                    <div class="col-lg-3">
+                        <div class="card" style="width: 25rem;">
+                            <img src={{item.image_url}} class="card-img-top" alt={{item.title}} width="200" height="200">
+                            <div class="card-body">
+                                <h4 class="card-title"><b>{{ item.title }}</b></h4>
+                            </div>
+                        </div>
                     </div>
-                {% endfor %}
+
+                    {% endfor %}
+
             </div>
+
         </div>
-    </div>
 
 </body>
 
