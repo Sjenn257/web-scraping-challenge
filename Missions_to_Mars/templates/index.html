@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission to Mars</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="jumbotron text-center">
+            <h1>Mission to Mars</h1>
+            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data!</a></p>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="header"><b>Latest Mars News</b></h2>
+                    <h3 class="headline">{{mars.news_title}}</h3>
+                    <p><b>{{mars.news_summary}}</b></p>
+                    <p>{{mars_info}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <h2 class="header"><b>Featured Mars Image</b></h2>
+                    <img class="img-fluid" src={{mars.featured_image}} alt="Mars Featured Image">
+                </div>
+                <div class="col-md-5">
+                    <h3 class="headline"><b>Mars Facts</b></h3>
+                    <div class="container">
+                        {{mars.mars_facts|safe}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h2 class="text-center"><b>Mars Hemispheres</b></h2>
+            <hr>
+            <div class="row">
+                {% for item in mars.hemispheres %}
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img class="card-img-top" src={{item.image_url}} alt={{item.title}}>
+                        <div class="card-body">
+                        <h3 class="card-text" class="text-center"><b>{{item.title}}</b></h3>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
